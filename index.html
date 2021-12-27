@@ -4,8 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>doggo</title>
+    <title>Good Doggo.</title>
+    <link rel="icon" type="image/png" href="./static/trigger.png" />
     <link href="static/fonts/fonts.css" rel="stylesheet" type="text/css" />
+
+    <meta name="description" content="Trigger is a good doggo." />
+    <meta
+      name="theme-color"
+      content="#aa8870"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#aa8870"
+      media="(prefers-color-scheme: dark)"
+    />
+    <meta property="og:url" content="trigger.wiki" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Good doggo." />
+    <meta property="og:description" content="Trigger is a good doggo." />
+    <meta
+      property="og:image"
+      content="https://cloud-fmt7qzd2v-hack-club-bot.vercel.app/0ezgif-5-29998e1cc2.gif"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <style>
     body,
@@ -17,17 +39,47 @@
     }
     .flavor {
       position: fixed;
-      bottom: 50px;
-      left: 20%;
+      bottom: 90px;
+      left: 70px;
       transform: translateX(-50px);
       font-family: "Comic Sans MS", arial;
-      font-size: 50px;
+      font-size: 36px;
       color: greenyellow;
+    }
+    .tada:hover {
+      cursor: pointer;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .earth {
+      animation: spin 4s infinite;
     }
   </style>
   <body>
     <canvas></canvas>
-    <div class="flavor"><span class="time">0</span> seconds old</div>
+    <div class="flavor">
+      <p>
+        Trigger has existed on earth <span class="earth">🌎</span> for
+        <span class="time">0</span> seconds.<span
+          class="tada"
+          onclick="jsConfetti.addConfetti()"
+        >
+          🎉</span
+        >
+      </p>
+    </div>
     <script src="./js/doggo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script defer>
+      const jsConfetti = new JSConfetti();
+    </script>
   </body>
 </html>
