@@ -11,7 +11,7 @@ const img = new Image();
 img.src = "./static/trigger.png";
 
 img.onload = () => {
-  draw();
+  loopDraw();
 };
 
 function draw(offset) {
@@ -24,7 +24,7 @@ function draw(offset) {
     imgDimensions.height + offset
   );
 }
-draw(2);
+
 const loopCount = 30;
 
 function loopDraw() {
